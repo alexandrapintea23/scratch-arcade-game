@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="rpint"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-08 09:38:54 PM"/>
+        <attribute name="created" value="cnBpbnQ7IEFMRTsgMjAyNS0wNC0wODsgMTI6MTY6MTkgUE07IDIxNDg="/>
+        <attribute name="edited" value="cnBpbnQ7IEFMRTsgMjAyNS0wNC0wODsgMDk6Mzg6NTQgUE07IDIxNTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;S-a oprit din executie runda curenta de joc!&quot;"/>
+            <declare name="leaderboard" type="Integer" array="True" size="100"/>
+            <declare name="temp, score, i, j, n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="0"/>
+            <input variable="score"/>
+            <output expression="&quot;Adauga scorul din runda jucata in leaderboard!&quot;"/>
+            <assign variable="leaderboard[n]" expression="score"/>
+            <assign variable="n" expression="n+1"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                    <if expression="leaderboard[i]&lt;leaderboard[j]">
+                        <then>
+                            <assign variable="temp" expression="leaderboard[i]"/>
+                            <assign variable="leaderboard[i]" expression="leaderboard[j]"/>
+                            <assign variable="leaderboard[j]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="leaderboard[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
