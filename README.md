@@ -1,5 +1,5 @@
 # scratch-arcade-game
-Game developed with Scratch featuring interactive gameplay and animations.
+Game developed with Scratch featuring interactive gameplay and animations
 
 A simple arcade game developed in Scratch during my first year of university.
 
